@@ -41,6 +41,11 @@ Dev App
 fastlane ios diawiapp
 ```
 Diawi App
+### ios mailsend
+```
+fastlane ios mailsend
+```
+
 ### ios appcertificates
 ```
 fastlane ios appcertificates
