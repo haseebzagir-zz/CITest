@@ -1,0 +1,155 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :custom_lane do
+    # add actions here: https://docs.fastlane.tools/actions
+  end
+
+  desc "Unit testing"
+  lane :tests do
+  run_tests(scheme: "CItestTests")
+  end
+
+  desc "Build App"
+  lane :beta do
+  build_app(scheme: "CItest",export_method: "app-store")
+  end
+
+
+ desc "Dev App"
+  lane :devcertificates do
+  build_app(
+scheme: "CItest",
+    export_method: "development",
+    export_options: {
+      provisioningProfiles: { 
+        "com.suyati.continousintegration" => "match Development com.suyati.continousintegration"
+      }
+    }
+  )
+  end
+
+desc "Diawi App"
+  lane :diawiapp do
+  build_app(
+scheme: "CItest",
+    export_method: "development",
+    export_options: {
+      provisioningProfiles: { 
+        "com.suyati.continousintegration" => "match Development com.suyati.continousintegration"
+      }
+    }
+  )
+diawi(
+    token: "hxc1EU59TSaV85aVtkyPSPurxqxOScW2nVC7n3PlZa",
+    file: "/Users/mhaseeb/Desktop/CITest/CITest.ipa"
+)
+
+mailgun(
+  to: "mhaseeb@suyati.com",
+  success: true,
+  message: "This is the mail's content"
+)
+  end
+
+
+
+lane :mailsend do
+mailgun(
+  to: "mhaseeb@suyati.com",
+  success: true,
+  message: "This is the mail's content"
+)
+  end
+
+
+
+
+
+
+desc "Appstore App"
+lane :appcertificates do
+  build_app(
+scheme: "CItest",
+    export_method: "app-store",
+    export_options: {
+      provisioningProfiles: { 
+        "com.suyati.continousintegration" => "match AppStore com.suyati.continousintegration"
+      }
+    }
+  )
+  end
+
+
+
+desc "chum App"
+lane :chummacertificates do
+  build_app(
+scheme: "CItest",
+    export_method: "development",
+    export_options: {
+      provisioningProfiles: { 
+        "com.suyati.continousintegration" => "ContinousIntegration"
+      }
+    }
+  )
+  end
+
+desc "TestFlight"
+lane :testFlighttest do
+  increment_build_number # see code signing guide for more information
+  build_app(
+    scheme: "CItest",
+    export_method: "app-store",
+    export_options: {
+      provisioningProfiles: { 
+        "com.suyati.continousintegration" => "match AppStore com.suyati.continousintegration"
+      }
+    }
+  )
+  upload_to_testflight(username: "appledev@suyati.com")
+  slack(message: "Successfully distributed a new beta build",slack_url: "https://hooks.slack.com/services/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"
+)
+end
+
+desc "App Store release"
+lane :release do
+  capture_screenshots      
+  build_app(
+    scheme: "CItest",
+    export_method: "app-store",
+    export_options: {
+      provisioningProfiles: { 
+      "com.suyati.continousintegration" => "match AppStore com.suyati.continousintegration"
+      }
+    }
+  )
+  upload_to_app_store                  # upload your app to iTunes Connect
+  slack(message: "Successfully uploaded a new App Store build")
+end
+
+desc "App Store release upload"
+lane :appstorerelease do
+  increment_version_number
+  #increment_build_number
+  upload_to_app_store                  # upload your app to iTunes Connect
+  slack(message: "Successfully uploaded a new App Store build")
+end
+
+end

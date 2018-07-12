@@ -14,6 +14,8 @@
 		A19C299C20ECD1D800FCB879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A19C299A20ECD1D800FCB879 /* LaunchScreen.storyboard */; };
 		A19C29A720ECD1D800FCB879 /* CItestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C29A620ECD1D800FCB879 /* CItestTests.swift */; };
 		A19C29B220ECD1D800FCB879 /* CItestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19C29B120ECD1D800FCB879 /* CItestUITests.swift */; };
+		EDA454A720F4E69A003B72CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA454A620F4E69A003B72CB /* Images.xcassets */; };
+		EDDD7A3520F6198500B6627B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD7A3420F6198500B6627B /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		A19C29AD20ECD1D800FCB879 /* CItestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CItestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A19C29B120ECD1D800FCB879 /* CItestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CItestUITests.swift; sourceTree = "<group>"; };
 		A19C29B320ECD1D800FCB879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDA454A620F4E69A003B72CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EDDD7A3420F6198500B6627B /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 				A19C299820ECD1D800FCB879 /* Assets.xcassets */,
 				A19C299A20ECD1D800FCB879 /* LaunchScreen.storyboard */,
 				A19C299D20ECD1D800FCB879 /* Info.plist */,
+				EDA454A620F4E69A003B72CB /* Images.xcassets */,
 			);
 			path = CItest;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 		A19C29B020ECD1D800FCB879 /* CItestUITests */ = {
 			isa = PBXGroup;
 			children = (
+				EDDD7A3420F6198500B6627B /* SnapshotHelper.swift */,
 				A19C29B120ECD1D800FCB879 /* CItestUITests.swift */,
 				A19C29B320ECD1D800FCB879 /* Info.plist */,
 			);
@@ -230,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A19C299C20ECD1D800FCB879 /* LaunchScreen.storyboard in Resources */,
+				EDA454A720F4E69A003B72CB /* Images.xcassets in Resources */,
 				A19C299920ECD1D800FCB879 /* Assets.xcassets in Resources */,
 				A19C299720ECD1D300FCB879 /* Main.storyboard in Resources */,
 			);
@@ -274,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A19C29B220ECD1D800FCB879 /* CItestUITests.swift in Sources */,
+				EDDD7A3520F6198500B6627B /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,17 +438,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QC6W9W37ZQ;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Krishna (CHNVHKDB96)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 8VW8M633KY;
 				INFOPLIST_FILE = CItest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iostest.CItest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suyati.continousintegration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "eb11676a-24cb-4f28-b3a5-ec29d8c8c448";
+				PROVISIONING_PROFILE_SPECIFIER = ContinousIntegration;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -448,17 +463,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QC6W9W37ZQ;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Krishna (CHNVHKDB96)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 8VW8M633KY;
 				INFOPLIST_FILE = CItest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.iostest.CItest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.suyati.continousintegration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "eb11676a-24cb-4f28-b3a5-ec29d8c8c448";
+				PROVISIONING_PROFILE_SPECIFIER = ContinousIntegration;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
