@@ -56,6 +56,11 @@ Appstore App
 fastlane ios chummacertificates
 ```
 chum App
+### ios incrementbuildtest
+```
+fastlane ios incrementbuildtest
+```
+Increment build
 ### ios testFlighttest
 ```
 fastlane ios testFlighttest
