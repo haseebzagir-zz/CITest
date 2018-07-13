@@ -111,6 +111,14 @@ scheme: "CItest",
   )
   end
 
+
+desc "Increment build"
+lane :incrementbuildtest do
+  increment_build_number # see code signing guide for more information
+
+end
+
+
 desc "TestFlight"
 lane :testFlighttest do
   increment_build_number # see code signing guide for more information
