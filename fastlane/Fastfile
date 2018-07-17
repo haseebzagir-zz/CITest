@@ -136,6 +136,23 @@ lane :testFlighttest do
 )
 end
 
+lane :configurationTest do
+increment_build_number
+  build_app(
+scheme: "CItest",
+configuration: "Debug internal",
+    export_method: "app-store",
+    export_options: {
+      provisioningProfiles: { 
+        "com.suyati.continousintegration" => "match AppStore com.suyati.continousintegration"
+      }
+    }
+  )
+  upload_to_testflight(username: "appledev@suyati.com")
+  slack(message: "Successfully distributed a new release",slack_url: "https://hooks.slack.com/services/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"
+)
+  end
+
 desc "App Store release"
 lane :release do
   capture_screenshots      
