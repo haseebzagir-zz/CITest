@@ -66,6 +66,11 @@ Increment build
 fastlane ios testFlighttest
 ```
 TestFlight
+### ios configurationTest
+```
+fastlane ios configurationTest
+```
+
 ### ios release
 ```
 fastlane ios release
