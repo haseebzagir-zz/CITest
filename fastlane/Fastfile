@@ -140,7 +140,7 @@ lane :configurationTest do
 increment_build_number
   build_app(
 scheme: "CItest",
-configuration: "Debug internal",
+configuration: "Debug",
     export_method: "app-store",
     export_options: {
       provisioningProfiles: { 
