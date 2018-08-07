@@ -454,6 +454,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "eb11676a-24cb-4f28-b3a5-ec29d8c8c448";
 				PROVISIONING_PROFILE_SPECIFIER = ContinousIntegration;
+				SERVER_URL = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -480,6 +481,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "eb11676a-24cb-4f28-b3a5-ec29d8c8c448";
 				PROVISIONING_PROFILE_SPECIFIER = ContinousIntegration;
+				SERVER_URL = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -649,6 +651,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "eb11676a-24cb-4f28-b3a5-ec29d8c8c448";
 				PROVISIONING_PROFILE_SPECIFIER = ContinousIntegration;
+				SERVER_URL = "http://stagingdevurl.com";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -771,6 +774,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "eb11676a-24cb-4f28-b3a5-ec29d8c8c448";
 				PROVISIONING_PROFILE_SPECIFIER = ContinousIntegration;
+				SERVER_URL = "http://stagingreleaseurl.com";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        let serverURL = Bundle.main.object(forInfoDictionaryKey: "SERVER_URL")
+        print("server url -- \(serverURL)")
         // Override point for customization after application launch.
         return true
     }
